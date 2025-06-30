@@ -3,8 +3,6 @@ from ConKmMilla import MillaKm
 from CelFa import CelFa
 from CelFa import FaCel
 
-
-
 pan = input("¿Qué queres calcular? Km<->Milla/Celsius<->Fahrenheit ")
 if pan == "Km<->Milla":
     jabon = input("¿Qué queres calcular? Km->Milla/Milla->Km ")
