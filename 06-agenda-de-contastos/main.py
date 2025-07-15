@@ -1,3 +1,8 @@
+from listar_contactos import listar_contactos
+from buscar_contactos import buscar_contactos
+from eliminar_contactos_csv import eliminar_contactos
+from agregar_contactos import agregar_contactos
+
 while True:
     print("""Bienvenido a tu agenda de contatas 
 Aca vas a poder ver el nombre, apellido y numero de las persona
@@ -9,13 +14,16 @@ Que es lo que queres hacer??
 5) Salir""")
     desicion = int(input("Elegir un numero: "))
     if desicion == 1:
+        contacto = input("A quien queres agregar?: ")
         print("Agregando contacto")
     elif desicion == 2:
-        print("Buscando contacto")
+        nombre = input("A quien queres buscar?: ")
+        print(buscar_contactos(nombre))
     elif desicion == 3:
-        print("Eliminando contacto")
+        nombre = input("A quien queres eliminar?: ")
+        print(eliminar_contactos(nombre))
     elif desicion == 4:
-        print("Listando contactos")
+        print(listar_contactos())
     elif desicion == 5:
         break
     else:
