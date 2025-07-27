@@ -1,6 +1,6 @@
 import pandas as pd
 
-def agregat_contactos(Nombre):
+def agregar_contactos(Nombre):
     try:
         contactos = pd.read_csv("06-agenda-de-contastos\\contactos.csv")
         existe = contactos["Nombre"] == Nombre
@@ -15,4 +15,3 @@ def agregat_contactos(Nombre):
             return f'Agregando el contacto: {Nombre}'
     except FileNotFoundError:
         return "No se encontro el archivo"
-print(agregat_contactos("Osvaldo", "Perez", 11))

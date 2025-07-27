@@ -15,7 +15,7 @@ Que es lo que queres hacer??
     desicion = int(input("Elegir un numero: "))
     if desicion == 1:
         contacto = input("A quien queres agregar?: ")
-        print("Agregando contacto")
+        print(agregar_contactos(contacto))
     elif desicion == 2:
         nombre = input("A quien queres buscar?: ")
         print(buscar_contactos(nombre))
