@@ -1,13 +1,15 @@
+marcador = {"victorias": 0, "derrotas": 0, "empates": 0}
+
 def conteo(resultado):
-    victorias = 0
-    derrotas = 0
-    empates = 0 
     if resultado == "Ganas":
-        victorias =+ 1 
-        return victorias
-    elif resultado == "Perdiste":
-        derrotas =+ 1
-        return derrotas
+        marcador["victorias"] += 1
+    elif resultado == "Pierdes":
+        marcador["derrotas"] += 1
     elif resultado == "Empate":
-        empates =+ 1 
-        return empates
+        marcador["empates"] += 1
+
+    return f'''
+Tus victorias son: {marcador["victorias"]}
+Tus derrotas son: {marcador["derrotas"]}
+Tus empates son: {marcador["empates"]}
+    '''

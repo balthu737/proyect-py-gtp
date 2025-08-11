@@ -1,23 +1,24 @@
 def comparacion(jugadaapp):
     jugador = input("cual es tu eleccion?: ")
     app = jugadaapp
-    if jugador == "tijeras" & app == "tijeras":
+    if jugador == "tijeras" and app == "tijeras":
         return "Empate"
-    elif jugador == "tijeras" & app == "piedra":
+    elif jugador == "tijeras" and app == "piedra":
         return "Pierdes"
-    elif jugador == "tijeras" & app == "papel":
+    elif jugador == "tijeras" and app == "papel":
         return "Ganas"
-    elif jugador == "piedra" & app == "tijeras":
+    elif jugador == "piedra" and app == "tijeras":
         return "Ganas"
-    elif jugador == "piedra" & app == "piedra":
+    elif jugador == "piedra" and app == "piedra":
         return "Empate"
-    elif jugador == "piedra" & app == "papel":
+    elif jugador == "piedra" and app == "papel":
         return "Pierdes"
-    elif jugador == "papel" & app == "tijeras": 
+    elif jugador == "papel" and app == "tijeras": 
         return "Pierdes"
-    elif jugador == "papel" & app == "piedra":
+    elif jugador == "papel" and app == "piedra":
         return "Ganas"
-    elif jugador == "papel" & app == "papel":
+    elif jugador == "papel" and app == "papel":
         return "Empate"
     else:
         return "Que haces??"
+
