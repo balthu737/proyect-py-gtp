@@ -1,0 +1,3 @@
+requirements.txt
+Este proyecto solo usa la libreria estandar de pyton 
+No requiere instalar paquetes adicionales 
