@@ -14,7 +14,7 @@ def eleccion():
             messagebox.showinfo("app", "piedra papel tijera")
     except:
         messagebox.showwarning("atencion", "por favor selecione un opcion")
-def interfas():
+def interfaz():
     global lista
     ventana = tk.Tk()
     ventana.geometry("300x150")
@@ -29,4 +29,4 @@ def interfas():
     boton.place(x=105, y=75)
     ventana.mainloop()
 
-interfas()
+interfaz()

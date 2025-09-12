@@ -1,0 +1,63 @@
+import tkinter as tk
+
+def app1():
+    app = tk.Tk()
+    app.geometry("500x500")
+    app.title("Convertido de unidades")
+    opcion = tk.IntVar()
+    label = tk.Label(app, text="¿Qué queres calcular?")
+    label.grid()
+    r1 = tk.Radiobutton(app, text="Km<->Milla",variable=opcion, value=1)
+    r1.grid()
+    r2 = tk.Radiobutton(app, text="Celsius<->Fahrenheit",variable=opcion, value=2)
+    r2.grid()
+    def abrir_ventana():
+        if opcion.get() == 1:
+            app.destroy
+            Km_Milla()
+        elif opcion.get() == 1:
+            app.destroy
+            Celsius_Fahrenheit()
+    boton = tk.Button(app, text="Seleciona", command=abrir_ventana)
+    boton.grid()
+    app.mainloop()
+
+def Km_Milla():
+    app = tk.Tk()
+    app.geometry("500x500")
+    app.title("Km<->Milla")
+    texto = tk.Label(app, text="Aqui calcular")
+    texto.grid()
+    texto2 = tk.Label(app, text="Aqui calcular")
+    texto2.grid()
+    explicacion1 = tk.Label(app, text="Escribir ")
+    explicacion1.grid()
+    entrada1 = tk.Entry(app)
+    entrada1.grid()
+    explicacion2 = tk.Label(app, text="Escribir")
+    explicacion2.grid()
+    entrada2 = tk.Entry(app)
+    entrada2.grid()
+    boton = tk.Button(app, text="Calcular")
+    boton.grid()
+    app.mainloop()
+def Celsius_Fahrenheit():
+    app = tk.Tk()
+    app.geometry("500x500")
+    app.title("Celsius<->Fahrenheit")
+    texto = tk.Label(app, text="Aqui calcular")
+    texto.grid()
+    texto2 = tk.Label(app, text="Aqui calcular")
+    texto2.grid()
+    explicacion1 = tk.Label(app, text="Escribir ")
+    explicacion1.grid()
+    entrada1 = tk.Entry(app)
+    entrada1.grid()
+    explicacion2 = tk.Label(app, text="Escribir")
+    explicacion2.grid()
+    entrada2 = tk.Entry(app)
+    entrada2.grid()
+    boton = tk.Button(app, text="Calcular")
+    boton.grid()
+    app.mainloop()
+app1()
