@@ -1,4 +1,8 @@
 import tkinter as tk
+import sys 
+sys.path.append("C:\Users\balth\OneDrive\Desktop\py\01-primeros-pasos-en-py\b_convertidor_de_unidades")
+from b_convertidor_de_unidades import Celfa, Facel
+from b_convertidor_de_unidades import KmMilla, MillaKm
 
 def app1():
     app = tk.Tk()
@@ -37,9 +41,11 @@ def Km_Milla():
     def calcular():
         try: 
             if entrada1.get():
-                resultado.set(f"")
+                valor = KmMilla(entrada1.get())
+                resultado.set(f"{entrada1.get()} Kilometros son {valor:.2f} Milla")
             elif entrada2.get():
-                resultado.set(f"")
+                valor = MillaKm(entrada2.get())
+                resultado.set(f"{entrada2.get()} Milla son {valor:.2f} Kilometros")
             else:
                 resultado.set(f"")
         except:
@@ -62,19 +68,21 @@ def Celsius_Fahrenheit():
     explicacion2.grid()
     entrada2 = tk.Entry(app)
     entrada2.grid()
+    resultado = tk.StringVar()
+    tk.Label(app, textvariable=resultado).grid()
     def calcular():
         try: 
             if entrada1.get():
-                resultado.set(f"")
+                valor = Celfa(entrada1.get())
+                resultado.set(f"{entrada1.get()} Celcius son {valor:.2f} Fahrenheit")
             elif entrada2.get():
-                resultado.set(f"")
+                valor = Facel(entrada2.get())
+                resultado.set(f"{entrada2.get()} Fahrenheit son {valor:.2f} Celsius")
             else:
                 resultado.set(f"")
         except:
             resultado.set("Error: valor no valido")
     boton = tk.Button(app, text="Calcular", command=calcular)
     boton.grid()
-    resultado = tk.StringVar()
-    tk.Label(app, textvariable=resultado).grid()
     app.mainloop()
 app1()

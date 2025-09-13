@@ -5,7 +5,8 @@ def KmMilla():
     #variable que calcula con la variable anterior
     milla = km / 1.609
     #retorna el resultado
-    return f'El resultado es: {milla}' 
+    #return f'El resultado es: {milla}' 
+    return milla
 #crea una funcion
 def MillaKm():
     #variable que pide un numero y lo convierte en flotante
@@ -13,4 +14,5 @@ def MillaKm():
     #variable que calcula con la variable anterior
     km = milla * 1.609
     #retorna el resultado
-    return f'El resultado es: {km}' 
+    #return f'El resultado es: {km}' 
+    return km

@@ -1,16 +1,18 @@
 #crea una funcion
-def CelFa():
+def CelFa(celsiu):
     #variable que pide un numero y lo convierte en flotante 
-    celsius = float(input("Celsius= "))
+    celsius = float(celsiu)
     #variable que hace calculo con la variable anterior
     fahrenheit = celsius *  9/5 + 32
     #retorna el resultado
-    return f'El resultado es: {fahrenheit}'
+    #return f'El resultado es: {fahrenheit}'
+    return fahrenheit
 #crea una funcion
-def FaCel():
+def FaCel(fahr):
     #variable que pide un numero y lo convierte en flotante
-    fahrenheit = float(input("Fahrenheit= "))
+    fahrenheit = float(input(fahr))
     #variable que hace calculo con la variable anterior
     celsius = (fahrenheit - 32) * 5/9
     #retorna el resultado
-    return f'El resultado es: {celsius}'
+    #return f'El resultado es: {celsius}'
+    return celsius
