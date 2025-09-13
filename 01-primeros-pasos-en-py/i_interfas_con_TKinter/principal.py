@@ -1,11 +1,13 @@
 import tkinter as tk
 from tkinter import messagebox
+from convertidor_de_unidades import app1
 
 def eleccion():
     try:
         selecion = lista.get(lista.curselection())
         if selecion == "Convertidor de unidades":
-            messagebox.showinfo("app", "convertidor de unidades")
+            app1()
+            #messagebox.showinfo("app", "convertidor de unidades")
         elif selecion == "Adivina el numero":
             messagebox.showinfo("app","adivina el numero")
         elif selecion == "To do":
