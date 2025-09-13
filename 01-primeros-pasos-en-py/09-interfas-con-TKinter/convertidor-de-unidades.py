@@ -26,38 +26,55 @@ def Km_Milla():
     app = tk.Tk()
     app.geometry("500x500")
     app.title("Km<->Milla")
-    texto = tk.Label(app, text="Aqui calcular")
-    texto.grid()
-    texto2 = tk.Label(app, text="Aqui calcular")
-    texto2.grid()
-    explicacion1 = tk.Label(app, text="Escribir ")
+    explicacion1 = tk.Label(app, text="Escribir Kilometros")
     explicacion1.grid()
     entrada1 = tk.Entry(app)
     entrada1.grid()
-    explicacion2 = tk.Label(app, text="Escribir")
+    explicacion2 = tk.Label(app, text="Escribir Milla")
     explicacion2.grid()
     entrada2 = tk.Entry(app)
     entrada2.grid()
-    boton = tk.Button(app, text="Calcular")
+    def calcular():
+        try: 
+            if entrada1.get():
+                resultado.set(f"")
+            elif entrada2.get():
+                resultado.set(f"")
+            else:
+                resultado.set(f"")
+        except:
+            resultado.set("Error: valor no valido")
+    boton = tk.Button(app, text="Calcular", command=calcular)
     boton.grid()
+    resultado = tk.StringVar()
+    tk.Label(app, textvariable=resultado).grid()
     app.mainloop()
+
 def Celsius_Fahrenheit():
     app = tk.Tk()
     app.geometry("500x500")
     app.title("Celsius<->Fahrenheit")
-    texto = tk.Label(app, text="Aqui calcular")
-    texto.grid()
-    texto2 = tk.Label(app, text="Aqui calcular")
-    texto2.grid()
-    explicacion1 = tk.Label(app, text="Escribir ")
+    explicacion1 = tk.Label(app, text="Escribir Celsius")
     explicacion1.grid()
     entrada1 = tk.Entry(app)
     entrada1.grid()
-    explicacion2 = tk.Label(app, text="Escribir")
+    explicacion2 = tk.Label(app, text="Escribir Fahrenheit")
     explicacion2.grid()
     entrada2 = tk.Entry(app)
     entrada2.grid()
-    boton = tk.Button(app, text="Calcular")
+    def calcular():
+        try: 
+            if entrada1.get():
+                resultado.set(f"")
+            elif entrada2.get():
+                resultado.set(f"")
+            else:
+                resultado.set(f"")
+        except:
+            resultado.set("Error: valor no valido")
+    boton = tk.Button(app, text="Calcular", command=calcular)
     boton.grid()
+    resultado = tk.StringVar()
+    tk.Label(app, textvariable=resultado).grid()
     app.mainloop()
 app1()
