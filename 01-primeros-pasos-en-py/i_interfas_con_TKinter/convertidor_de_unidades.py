@@ -1,10 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
+from b_ConvertidorDeUnidades.CelFa import CelFa, FaCel
+from b_ConvertidorDeUnidades.ConKmMilla import KmMilla, MillaKm
 
 def app1():
     app = tk.Tk()
     app.geometry("500x500")
-    app.title("Convertido de unidades")
+    app.title("Convertidor de unidades")
     opcion = tk.IntVar()
     label = tk.Label(app, text="¿Qué queres calcular?")
     label.grid()
@@ -41,15 +43,17 @@ def Km_Milla():
     def calcular():
         try: 
             if entrada1.get():
-                km = float(entrada1.get())
-                valor = km/1.609
+                km = entrada1.get()
+                valor = KmMilla(km)
+                print(f"{entrada1.get()} km son {valor:.2f} milla")
                 resultado.set(f"{entrada1.get()} Kilometros son {valor:.2f} Milla")
             elif entrada2.get():
-                milla = float(entrada2.get())
-                valor = milla*1.609
+                milla = entrada2.get()
+                valor = MillaKm(milla)
+                print(f"{entrada2.get()} Milla son {valor:.2f} Kilometros")
                 resultado.set(f"{entrada2.get()} Milla son {valor:.2f} Kilometros")
             else:
-                resultado.set(f"")
+                resultado.set("Que hacer salame?")
         except:
             resultado.set("Error: valor no valido")
     boton = tk.Button(app, text="Calcular", command=calcular)
@@ -74,18 +78,21 @@ def Celsius_Fahrenheit():
     def calcular():
         try: 
             if entrada1.get():
-                celsius = float(entrada1.get())
-                valor = celsius*9.5+32
+                celsius = entrada1.get()
+                valor = CelFa(celsius)
+                print(f"{entrada1.get()} Celcius son {valor:.2f} Fahrenheit")
                 resultado.set(f"{entrada1.get()} Celcius son {valor:.2f} Fahrenheit")
             elif entrada2.get():
-                fahrenheit = float(entrada2.get())
-                valor = (fahrenheit-32)*5/9
+                fahrenheit = entrada2.get()
+                valor = FaCel(fahrenheit)
+                print(f"{entrada2.get()} Fahrenheit son {valor:.2f} Celsius")
                 resultado.set(f"{entrada2.get()} Fahrenheit son {valor:.2f} Celsius")
             else:
-                resultado.set(f"")
+                resultado.set(f"no deveria salir esto")
         except:
             resultado.set("Error: valor no valido")
     boton = tk.Button(app, text="Calcular", command=calcular)
     boton.grid()
     app.mainloop()
 
+app1()

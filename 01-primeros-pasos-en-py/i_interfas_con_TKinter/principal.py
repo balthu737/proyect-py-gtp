@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from convertidor_de_unidades import app1
+from adivina_el_numero import adivina
 
 def eleccion():
     try:
@@ -9,7 +10,8 @@ def eleccion():
             app1()
             #messagebox.showinfo("app", "convertidor de unidades")
         elif selecion == "Adivina el numero":
-            messagebox.showinfo("app","adivina el numero")
+            adivina()
+            #messagebox.showinfo("app","adivina el numero")
         elif selecion == "To do":
             messagebox.showinfo("app", "to do")
         elif selecion == "Piedra papel o tijeras":
