@@ -46,12 +46,12 @@ def Km_Milla():
                 km = entrada1.get()
                 valor = KmMilla(km)
                 print(f"{entrada1.get()} km son {valor:.2f} milla")
-                resultado.set(f"{entrada1.get()} Kilometros son {valor:.2f} Milla")
+                resultado.set(valor)
             elif entrada2.get():
                 milla = entrada2.get()
                 valor = MillaKm(milla)
                 print(f"{entrada2.get()} Milla son {valor:.2f} Kilometros")
-                resultado.set(f"{entrada2.get()} Milla son {valor:.2f} Kilometros")
+                resultado.set(valor)
             else:
                 resultado.set("Que hacer salame?")
         except:
@@ -81,12 +81,12 @@ def Celsius_Fahrenheit():
                 celsius = entrada1.get()
                 valor = CelFa(celsius)
                 print(f"{entrada1.get()} Celcius son {valor:.2f} Fahrenheit")
-                resultado.set(f"{entrada1.get()} Celcius son {valor:.2f} Fahrenheit")
+                resultado.set(valor)
             elif entrada2.get():
                 fahrenheit = entrada2.get()
                 valor = FaCel(fahrenheit)
                 print(f"{entrada2.get()} Fahrenheit son {valor:.2f} Celsius")
-                resultado.set(f"{entrada2.get()} Fahrenheit son {valor:.2f} Celsius")
+                resultado.set(valor)
             else:
                 resultado.set(f"no deveria salir esto")
         except:
@@ -94,5 +94,3 @@ def Celsius_Fahrenheit():
     boton = tk.Button(app, text="Calcular", command=calcular)
     boton.grid()
     app.mainloop()
-
-app1()

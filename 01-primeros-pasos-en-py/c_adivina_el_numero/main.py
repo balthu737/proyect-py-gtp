@@ -7,3 +7,4 @@ def juego():
         print(intentos)
         adivinar(numero)
         intentos += 1
+juego()

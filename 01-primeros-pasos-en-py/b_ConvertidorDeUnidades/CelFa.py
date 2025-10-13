@@ -6,7 +6,7 @@ def CelFa(celsiu):
     fahrenheit = celsius *  9/5 + 32
     #retorna el resultado
     #return f'El resultado es: {fahrenheit}'
-    return fahrenheit
+    return f"{celsius} Celcius son {fahrenheit:.2f} Fahrenheit"
 #crea una funcion
 def FaCel(fahr):
     #variable que pide un numero y lo convierte en flotante
@@ -15,4 +15,4 @@ def FaCel(fahr):
     celsius = (fahrenheit - 32) * 5/9
     #retorna el resultado
     #return f'El resultado es: {celsius}'
-    return celsius
+    return f"{fahrenheit} Fahrenheit son {celsius:.2f} Celsius"
