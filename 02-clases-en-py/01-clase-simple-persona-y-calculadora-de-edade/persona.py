@@ -14,5 +14,5 @@ class Persona:
 nombre = input("Cual es tu nombre?: ")
 edad = int(input("Cual estu edad?: "))
 persona = Persona(nombre, edad)
-#persona.presentacion()
+#ersona.presentacion()
 #print(persona)
