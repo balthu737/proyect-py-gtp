@@ -20,10 +20,24 @@ class CuentaBancaria:
     def ver_saldo(self):
         return f'Este es tu saldo: {self._saldo}'
 
+class CuentaDeAhorros(CuentaBancaria):
+    def __init__(self, saldo, interes):
+        super().__init__(saldo)
+        self._interes = interes
+    def aplicar_interes(self):
+        saldo_anterior = self._saldo
+        self._saldo += self._saldo * self._interes
+        print(f'El saldo anterior era de:{saldo_anterior}|El interes aplicado es de:{self._interes*100}%|El saldo actual es de {self._saldo}')
+
 try:
     cuenta_de_ale = CuentaBancaria(1000)
     cuenta_de_ale.depositar(10000)
     cuenta_de_ale.retirar(5000)
+    cuenta_de_ahorros = CuentaDeAhorros(10000, 1200)
+    cuenta_de_ahorros.depositar(10000)
+    cuenta_de_ahorros.aplicar_interes()
+    cuenta_de_ahorros.retirar(1000000)
+    cuenta_de_ahorros.ver_saldo()
     print(cuenta_de_ale.ver_saldo())
 except FondosInsuficientes as e:
     print(e)
